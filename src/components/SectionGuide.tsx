@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import {
   CheckCircle2, XCircle,
   ArrowRight, Copy, Check,
-  Rocket, PenTool, MessageSquare, Globe2
+  Rocket, PenTool, MessageSquare, Globe
 } from 'lucide-react'
 
 const steps = [
@@ -49,7 +49,7 @@ const steps = [
   },
   {
     num: '04',
-    icon: Globe2,
+    icon: Globe,
     title: '部署上线',
     desc: '一键发布到公网，分享给全世界看到你的作品',
     platforms: [
@@ -175,7 +175,7 @@ function StepCard({ step }: { step: typeof steps[0] }) {
                   className="w-10 h-10 mx-auto mb-2 rounded-lg flex items-center justify-center transition-colors"
                   style={{ background: `${pf.color}15` }}
                 >
-                  <Globe2 size={18} style={{ color: pf.color }} />
+                  <Globe size={18} style={{ color: pf.color }} />
                 </div>
                 <h4 className="font-semibold text-white text-sm mb-1">{pf.name}</h4>
                 <p className="text-xs text-txt-secondary">{pf.desc}</p>

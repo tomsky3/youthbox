@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import {
-  Globe, Gamepad2, Wrench, TrendingUp,
+  Globe, Gamepad, Wrench, TrendingUp,
   Clock, Star, ChevronRight, X
 } from 'lucide-react'
 
@@ -234,7 +234,7 @@ const casesData: Record<string, CaseItem[]> = {
 
 const categories = [
   { key: 'website', label: '🌐 网站', icon: Globe, color: '#00fff2' },
-  { key: 'game', label: '🎮 小游戏', icon: Gamepad2, color: '#b829ff' },
+  { key: 'game', label: '🎮 小游戏', icon: Gamepad, color: '#b829ff' },
   { key: 'tool', label: '🛠️ 工具', icon: Wrench, color: '#ff2d7a' },
   { key: 'quant', label: '📈 量化', icon: TrendingUp, color: '#00ff88' },
 ]

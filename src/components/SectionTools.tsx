@@ -1,5 +1,13 @@
 import { useRef } from 'react'
 import { Globe, ChevronLeft, ChevronRight } from 'lucide-react'
+import workbuddyLogo from '/logos/workbuddy.svg'
+import traeLogo from '/logos/trae.svg'
+import claudeLogo from '/logos/claude.svg'
+import openaiLogo from '/logos/openai.svg'
+import cursorLogo from '/logos/cursor.png'
+import v0Logo from '/logos/v0.svg'
+import boltLogo from '/logos/bolt.svg'
+import windsurfLogo from '/logos/windsurf.svg'
 
 export interface Tool {
   name: string
@@ -13,56 +21,56 @@ export interface Tool {
 const tools: Tool[] = [
   {
     name: 'WorkBuddy',
-    logo: '/logos/workbuddy.svg',
+    logo: workbuddyLogo,
     tagline: '全场景 AI 编程助手，内置金融数据、文档生成等插件生态',
     tags: ['全能型', '中文友好', '插件丰富'],
     color: '#00fff2',
   },
   {
     name: 'Trae',
-    logo: '/logos/trae.svg',
+    logo: traeLogo,
     tagline: '字节跳动出品，深度集成 AI 的下一代 IDE',
     tags: ['IDE', '国产', '免费'],
     color: '#7c3aed',
   },
   {
     name: 'Claude Code',
-    logo: '/logos/claude.svg',
+    logo: claudeLogo,
     tagline: 'Anthropic 出品，终端级 AI 编程 Agent',
     tags: ['Agent', 'Terminal', '长上下文'],
     color: '#d97706',
   },
   {
     name: 'Codex / ChatGPT',
-    logo: '/logos/openai.svg',
+    logo: openaiLogo,
     tagline: 'OpenAI 旗舰，通用对话式编程助手',
     tags: ['通用', 'GPT-4o', '多模态'],
     color: '#10a37f',
   },
   {
     name: 'Cursor',
-    logo: '/logos/cursor.png',
+    logo: cursorLogo,
     tagline: 'AI-First 代码编辑器，Tab 补全 + 聊天双模式',
     tags: ['编辑器', '补全', '协作'],
     color: '#6366f1',
   },
   {
     name: 'v0 by Vercel',
-    logo: '/logos/v0.svg',
+    logo: v0Logo,
     tagline: '用自然语言生成 React/Tailwind UI 组件',
     tags: ['UI生成', 'Shadcn', '快速原型'],
     color: '#8b5cf6',
   },
   {
     name: 'Bolt.new',
-    logo: '/logos/bolt.svg',
+    logo: boltLogo,
     tagline: 'StackBlitz 出品，浏览器内全栈应用即时运行',
     tags: ['浏览器', '全栈', '零配置'],
     color: '#ffd93d',
   },
   {
     name: 'Windsurf',
-    logo: '/logos/windsurf.svg',
+    logo: windsurfLogo,
     tagline: 'Codeium 出品，AI 驱动的流式编程体验',
     tags: ['流式', 'IDE', '智能感知'],
     color: '#0ea5e9',

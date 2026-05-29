@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Code2, MessageCircle, Sparkles, ArrowRight, Terminal } from 'lucide-react'
+import { Code, MessageCircle, Sparkles, ArrowRight, Terminal } from 'lucide-react'
 
 function TypingDemo() {
   const [phase, setPhase] = useState(0)
@@ -131,7 +131,7 @@ function TypingDemo() {
 export default function SectionWhatIsVC() {
   const cards = [
     { icon: MessageCircle, title: '你说，AI 做', desc: '用日常语言描述你想要的东西，AI 理解并生成代码', colorClass: 'neon-cyan' },
-    { icon: Code2, title: '迭代对话', desc: '"改个颜色""加个按钮""左边对齐" — 像聊天一样优化产品', colorClass: 'neon-purple' },
+    { icon: Code, title: '迭代对话', desc: '"改个颜色""加个按钮""左边对齐" — 像聊天一样优化产品', colorClass: 'neon-purple' },
     { icon: Sparkles, title: '即时预览', desc: '每句话都能看到效果，所见即所得的创造体验', colorClass: 'neon-pink' },
   ]
 

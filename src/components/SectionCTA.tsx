@@ -1,4 +1,5 @@
 import { Sparkles, ArrowRight, Heart } from 'lucide-react'
+import qrcodeImg from '/qrcode-group.jpg'
 
 export default function SectionCTA() {
   return (
@@ -55,7 +56,7 @@ export default function SectionCTA() {
             {/* QR Code Image */}
             <div className="w-36 h-36 rounded-2xl bg-white p-2 shadow-lg shadow-neon-cyan/10">
               <img
-                src="/qrcode-group.jpg"
+                src={qrcodeImg}
                 alt="YouthBox 活动群二维码"
                 className="w-full h-full rounded-lg object-cover"
               />
