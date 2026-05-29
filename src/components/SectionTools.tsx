@@ -202,4 +202,4 @@ export default function SectionTools() {
   )
 }
 
-export type { Tool }
+// Tool type is exported via export interface on line 4
