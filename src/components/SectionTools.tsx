@@ -1,14 +1,9 @@
 import { useRef } from 'react'
-import {
-  Globe, ChevronLeft, ChevronRight,
-  Bot, Code2, Terminal, MessageSquare, MousePointer2,
-  Wand2, Zap, Waves
-} from 'lucide-react'
+import { Globe, ChevronLeft, ChevronRight } from 'lucide-react'
 
 export interface Tool {
   name: string
-  icon: React.ReactNode
-  iconBg: string
+  logo: string
   tagline: string
   tags: string[]
   color: string
@@ -18,64 +13,56 @@ export interface Tool {
 const tools: Tool[] = [
   {
     name: 'WorkBuddy',
-    icon: <Bot size={24} strokeWidth={1.5} />,
-    iconBg: '#6C4DFF',
+    logo: '/logos/workbuddy.svg',
     tagline: '全场景 AI 编程助手，内置金融数据、文档生成等插件生态',
     tags: ['全能型', '中文友好', '插件丰富'],
     color: '#00fff2',
   },
   {
     name: 'Trae',
-    icon: <Code2 size={24} strokeWidth={1.5} />,
-    iconBg: '#7c3aed',
+    logo: '/logos/trae.svg',
     tagline: '字节跳动出品，深度集成 AI 的下一代 IDE',
     tags: ['IDE', '国产', '免费'],
     color: '#7c3aed',
   },
   {
     name: 'Claude Code',
-    icon: <Terminal size={24} strokeWidth={1.5} />,
-    iconBg: '#d97706',
+    logo: '/logos/claude.svg',
     tagline: 'Anthropic 出品，终端级 AI 编程 Agent',
     tags: ['Agent', 'Terminal', '长上下文'],
     color: '#d97706',
   },
   {
     name: 'Codex / ChatGPT',
-    icon: <MessageSquare size={24} strokeWidth={1.5} />,
-    iconBg: '#10a37f',
+    logo: '/logos/openai.svg',
     tagline: 'OpenAI 旗舰，通用对话式编程助手',
     tags: ['通用', 'GPT-4o', '多模态'],
     color: '#10a37f',
   },
   {
     name: 'Cursor',
-    icon: <MousePointer2 size={24} strokeWidth={1.5} />,
-    iconBg: '#6366f1',
+    logo: '/logos/cursor.png',
     tagline: 'AI-First 代码编辑器，Tab 补全 + 聊天双模式',
     tags: ['编辑器', '补全', '协作'],
     color: '#6366f1',
   },
   {
     name: 'v0 by Vercel',
-    icon: <Wand2 size={24} strokeWidth={1.5} />,
-    iconBg: '#8b5cf6',
+    logo: '/logos/v0.svg',
     tagline: '用自然语言生成 React/Tailwind UI 组件',
     tags: ['UI生成', 'Shadcn', '快速原型'],
     color: '#8b5cf6',
   },
   {
     name: 'Bolt.new',
-    icon: <Zap size={24} strokeWidth={1.5} />,
-    iconBg: '#ffd93d',
+    logo: '/logos/bolt.svg',
     tagline: 'StackBlitz 出品，浏览器内全栈应用即时运行',
     tags: ['浏览器', '全栈', '零配置'],
     color: '#ffd93d',
   },
   {
     name: 'Windsurf',
-    icon: <Waves size={24} strokeWidth={1.5} />,
-    iconBg: '#0ea5e9',
+    logo: '/logos/windsurf.svg',
     tagline: 'Codeium 出品，AI 驱动的流式编程体验',
     tags: ['流式', 'IDE', '智能感知'],
     color: '#0ea5e9',
@@ -95,17 +82,19 @@ function ToolCard({ tool, index }: { tool: Tool; index: number }) {
       />
 
       <div className="p-5">
-        {/* Icon + Name */}
+        {/* Logo + Name */}
         <div className="flex items-center gap-3 mb-4">
           <div
-            className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg"
+            className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg overflow-hidden bg-white/95"
             style={{
-              background: `linear-gradient(135deg, ${tool.iconBg}20, ${tool.iconBg}40)`,
-              border: `1px solid ${tool.iconBg}30`,
-              color: tool.iconBg,
+              border: `1px solid ${tool.color}30`,
             }}
           >
-            {tool.icon}
+            <img
+              src={tool.logo}
+              alt={tool.name}
+              className="w-full h-full object-contain p-2"
+            />
           </div>
           <div>
             <h3 className="font-bold text-white text-base group-hover:text-neon-cyan transition-colors">
@@ -124,7 +113,7 @@ function ToolCard({ tool, index }: { tool: Tool; index: number }) {
           {tool.tags.map((tag) => (
             <span
               key={tag}
-              className="text-[11px] px-2 py-0.5 rounded-full font-medium"
+              className="text-[11px] px-2 py-0.5 rounded-full font-medium border"
               style={{
                 background: `${tool.color}15`,
                 color: tool.color,
